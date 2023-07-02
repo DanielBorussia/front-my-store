@@ -1,0 +1,27 @@
+.shoppingItem{
+    background-color: white;
+    padding: 30px 20px;
+    .shoppingItem__info{
+        span{
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+
+    .shoppingItem__info--details{
+        margin-bottom: 20px;
+    }
+
+    .shoppingItem__products{
+        display: flex;
+        .shoppingProductItem{
+            margin-right: 10px;
+            img{
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.shoppingItem{
+    background-color: white;
+    .shoppingItem__info{
+        span{
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+
+    .shoppingItem__info--detail{
+        margin-bottom: 20px;
+    }
+}

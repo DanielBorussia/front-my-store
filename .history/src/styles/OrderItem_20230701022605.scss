@@ -1,0 +1,23 @@
+@import 'vars';
+
+.orderItem {
+	display: grid;
+	grid-template-columns: auto 1fr auto auto;
+	gap: 16px;
+	margin-bottom: 24px;
+	align-items: center;
+    .orderItem__image img{
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+    .orderItem__information--title{
+        color: var(--very-light-pink);
+    }
+    .orderItem__information--price{
+        font-size: var(--md);
+        font-weight: bold;
+    }
+}
+

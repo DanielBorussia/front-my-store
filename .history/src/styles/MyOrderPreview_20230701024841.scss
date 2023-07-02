@@ -1,0 +1,70 @@
+@import 'vars';
+
+.myOrderPreview {
+	transition: right .5s;
+    background: #fff;
+	width: 360px;
+	height: 100%;
+	padding: 24px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 0;
+	top: 69px;
+	border-radius: 6px;
+	bottom: 0;
+	z-index: 1;
+	border: 1px solid var(--very-light-pink);
+    .myOrderPreview__title {
+        display: flex;
+        font-size: var(--lg);
+	    font-weight: bold;
+		color: var(--black);
+        img {
+            margin-right: 14px;
+         }
+    }
+}
+
+.xxx{
+	height: 100%;
+    width: calc(100% - 360px);
+    display: flex;
+}
+
+.myOrderPreview__resume {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 16px;
+	align-items: center;
+	background-color: var(--text-input-field);
+	margin-bottom: 24px;
+	border-radius: 8px;
+	padding: 0 24px;
+	color: var(--black);
+	
+	.myOrderPreview__resume--label {
+		font-size: var(--md);
+		font-weight: bold;
+	}
+	.myOrderPreview__resume--value {
+		text-align: end;
+		font-weight: bold;
+	}
+}
+
+.primary-button {
+	background-color: var(--hospital-green);
+	border-radius: 8px;
+	border: none;
+	color: var(--white);
+	width: 100%;
+	cursor: pointer;
+	font-size: var(--md);
+	font-weight: bold;
+	height: 50px;
+}
+@media (max-width: 640px) {
+	.myOrderPreview {
+		width: 100%;
+	}
+}
