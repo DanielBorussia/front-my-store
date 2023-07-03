@@ -4,9 +4,6 @@ import { Box } from '@mui/material';
 // Styles Component
 import './../styles/ShoppingItem.scss';
 import { formatCurrency } from '../shared/Utils';
-// utils date
-import { format, addDays } from "date-fns";
-import { es } from "date-fns/locale";
 
 const ShoppingItem = ({ order }) => {
     return (
@@ -14,7 +11,7 @@ const ShoppingItem = ({ order }) => {
             <Box className="shoppingItem__info">
                 <span>Tu Pedido: {order.code}</span>
                 <Box className="shoppingItem__info--details">
-                    {  format(new Date(order.created_at),"dd/MM/yyyy",{locale: es})} | $ {formatCurrency(order?.total)} | {order.products.length } artículos
+                    {order.created_at} | $ {formatCurrency(order?.total)} | {order.products.length } artículos
                 </Box>
             </Box>
             <Box className="shoppingItem__content">

@@ -14,7 +14,13 @@ const ShoppingItem = ({ order }) => {
             <Box className="shoppingItem__info">
                 <span>Tu Pedido: {order.code}</span>
                 <Box className="shoppingItem__info--details">
-                    {  format(new Date(order.created_at),"dd/MM/yyyy",{locale: es})} | $ {formatCurrency(order?.total)} | {order.products.length } artículos
+                    {  format(
+                     new Date(order.created_at),
+                      "dd/MM/yyyy",
+                      {
+                        locale: es,
+                      }
+                    )} | $ {formatCurrency(order?.total)} | {order.products.length } artículos
                 </Box>
             </Box>
             <Box className="shoppingItem__content">
