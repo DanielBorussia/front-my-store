@@ -1,0 +1,21 @@
+@import 'vars';
+
+.login {
+	display: flex;
+  	justify-content: center;
+	margin: 250px auto;
+}
+.login__container {
+	background-color: white;
+	padding: 20px 30px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+.button__login {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
