@@ -61,11 +61,6 @@ const Header = () => {
       })
     }
 
-    const handleLinkOrders = () => {
-      history('/orderList');
-      handleCloseUserMenu();
-    }
-
 
     return (
     <AppBar position="static">
@@ -175,7 +170,7 @@ const Header = () => {
               <span style={{ marginRight: "20px"}}>{user.email}</span>
               <Tooltip title="Opciones">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt={user?.name} src="/static/images/avatar/2.jpg" />
+                  <Avatar alt={user.name} src="/static/images/avatar/2.jpg" />
                 </IconButton>
                
               </Tooltip>
@@ -197,11 +192,9 @@ const Header = () => {
                 onClose={handleCloseUserMenu}
               >
                
-              
-                <MenuItem  onClick={handleLinkOrders}>
+                <MenuItem  onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">Mis Pedidos</Typography>
                 </MenuItem>
-                 
 
                 <MenuItem onClick={handleCloseSession}>
                   <Typography textAlign="center">Cerrar Sesión</Typography>

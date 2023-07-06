@@ -61,11 +61,6 @@ const Header = () => {
       })
     }
 
-    const handleLinkOrders = () => {
-      history('/orderList');
-      handleCloseUserMenu();
-    }
-
 
     return (
     <AppBar position="static">
@@ -197,11 +192,11 @@ const Header = () => {
                 onClose={handleCloseUserMenu}
               >
                
-              
-                <MenuItem  onClick={handleLinkOrders}>
+                <MenuItem  onClick={handleCloseUserMenu}>
+                <Link href='/orderList'>
                   <Typography textAlign="center">Mis Pedidos</Typography>
+                  </Link>
                 </MenuItem>
-                 
 
                 <MenuItem onClick={handleCloseSession}>
                   <Typography textAlign="center">Cerrar Sesión</Typography>

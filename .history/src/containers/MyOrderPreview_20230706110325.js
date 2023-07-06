@@ -58,7 +58,9 @@ const MyOrderPreview = ({ handleClose }) => {
 			</div>
 				
             <div className="myOrderPreview__resume">
-					<p className='myOrderPreview__resume--label'>Total </p>
+				{console.log(user)}
+				{console.log(state.cart)}
+					<p className='myOrderPreview__resume--label'>Total {state.cart.length}</p>
 					<p className='myOrderPreview__resume--value'>
 					 {`$${formatCurrency(sumTotal())}`}</p>
 				</div>
