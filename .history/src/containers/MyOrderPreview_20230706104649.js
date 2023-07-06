@@ -25,7 +25,7 @@ const MyOrderPreview = ({ handleClose }) => {
 	const handleCreateOrder = () => {
 		console.log("click");
 		console.log(state.cart);
-		const data = {
+		/*const data = {
 			"idUser" : user.id,
 			"total" : sumTotal(),
 			"products" : state.cart
@@ -39,11 +39,7 @@ const MyOrderPreview = ({ handleClose }) => {
 				state.cart = [];
 				navigate('/orderList');
 			}
-		})
-	}
-
-	const validateDisabled = () => {
-		return (!user?.name || state.cart.length === 0) ? true : false;
+		})*/
 	}
 
 	return (	
@@ -56,15 +52,15 @@ const MyOrderPreview = ({ handleClose }) => {
 					<OrderItem product={product} key={`orderItem-${product.id}`} />
 				))}
 			</div>
-				
             <div className="myOrderPreview__resume">
-					<p className='myOrderPreview__resume--label'>Total </p>
+					<p className='myOrderPreview__resume--label'>Total</p>
 					<p className='myOrderPreview__resume--value'>
-					 {`$${formatCurrency(sumTotal())}`}</p>
+					{`$${formatCurrency(sumTotal())}`}</p>
 				</div>
+				
             	<button 
-					className={`button__primary ${validateDisabled()  && 'button__disabled'  }`} 
-					disabled={user?.name && state.cart.length !== 0 ? false : true} 
+					className={`button__primary ${!user?.name || state.cart.length === 0  && 'button__disabled'  }`} 
+					disabled={user?.name || state.cart.length !== 0 ? false : true} 
 					onClick={handleCreateOrder}
 				>
 					{loadingForm ? (<CircularProgress data-testid="loadingProgress" size={30} color="inherit" />) : (

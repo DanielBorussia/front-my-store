@@ -25,7 +25,7 @@ const MyOrderPreview = ({ handleClose }) => {
 	const handleCreateOrder = () => {
 		console.log("click");
 		console.log(state.cart);
-		const data = {
+		/*const data = {
 			"idUser" : user.id,
 			"total" : sumTotal(),
 			"products" : state.cart
@@ -39,7 +39,7 @@ const MyOrderPreview = ({ handleClose }) => {
 				state.cart = [];
 				navigate('/orderList');
 			}
-		})
+		})*/
 	}
 
 	const validateDisabled = () => {
@@ -58,7 +58,9 @@ const MyOrderPreview = ({ handleClose }) => {
 			</div>
 				
             <div className="myOrderPreview__resume">
-					<p className='myOrderPreview__resume--label'>Total </p>
+				{console.log(user)}
+				{console.log(state.cart)}
+					<p className='myOrderPreview__resume--label'>Total {state.cart.length}</p>
 					<p className='myOrderPreview__resume--value'>
 					 {`$${formatCurrency(sumTotal())}`}</p>
 				</div>

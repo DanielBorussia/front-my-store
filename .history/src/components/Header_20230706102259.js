@@ -61,11 +61,6 @@ const Header = () => {
       })
     }
 
-    const handleLinkOrders = () => {
-      history('/orderList');
-      handleCloseUserMenu();
-    }
-
 
     return (
     <AppBar position="static">
@@ -132,24 +127,7 @@ const Header = () => {
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
 
           {/* Logo Mobile */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            MY STORE
-          </Typography>
+       
 
           {/* Links */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -175,7 +153,7 @@ const Header = () => {
               <span style={{ marginRight: "20px"}}>{user.email}</span>
               <Tooltip title="Opciones">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt={user?.name} src="/static/images/avatar/2.jpg" />
+                  <Avatar alt={user.name} src="/static/images/avatar/2.jpg" />
                 </IconButton>
                
               </Tooltip>
@@ -197,11 +175,9 @@ const Header = () => {
                 onClose={handleCloseUserMenu}
               >
                
-              
-                <MenuItem  onClick={handleLinkOrders}>
+                <MenuItem  onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">Mis Pedidos</Typography>
                 </MenuItem>
-                 
 
                 <MenuItem onClick={handleCloseSession}>
                   <Typography textAlign="center">Cerrar Sesión</Typography>
